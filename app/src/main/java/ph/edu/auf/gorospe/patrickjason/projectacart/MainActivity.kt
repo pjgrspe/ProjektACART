@@ -9,23 +9,40 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.tooling.preview.Preview
-import ph.edu.auf.gorospe.patrickjason.projectacart.ui.theme.ProjectACARTTheme
+import com.google.accompanist.systemuicontroller.rememberSystemUiController
+import ph.edu.auf.gorospe.patrickjason.projectacart.presentation.BottomNavigationBar
+import ph.edu.auf.gorospe.patrickjason.projectacart.presentation.auth.welcomescreen.WelcomeScreen
+import ph.edu.auf.gorospe.patrickjason.projectacart.ui.theme.AppTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            ProjectACARTTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+            AppTheme {
+                SetBarColor(color = AppTheme.colorScheme.background)
+                Scaffold(
+//                    bottomBar = { BottomNavigationBar() },
+                    modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    WelcomeScreen()
                     Greeting(
                         name = "Android",
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
             }
+        }
+    }
+    @Composable
+    private fun SetBarColor(color: Color){
+        val systemUIController = rememberSystemUiController()
+        SideEffect {
+            systemUIController.setSystemBarsColor(color = color)
         }
     }
 }
@@ -41,7 +58,7 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    ProjectACARTTheme {
+    AppTheme {
         Greeting("Android")
     }
 }

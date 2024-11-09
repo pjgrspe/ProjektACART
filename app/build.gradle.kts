@@ -51,6 +51,9 @@ android {
 
 dependencies {
 
+    //system ui
+    implementation(libs.accompanist.systemuicontroller)
+    //others
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
