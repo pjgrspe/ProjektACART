@@ -24,7 +24,7 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import ph.edu.auf.gorospe.patrickjason.projectacart.presentation.bottomnav.BottomNavigationItem
+import ph.edu.auf.gorospe.patrickjason.projectacart.presentation.components.bottomnav.BottomNavigationItem
 import ph.edu.auf.gorospe.patrickjason.projectacart.ui.theme.AppTheme
 
 //ITEMS

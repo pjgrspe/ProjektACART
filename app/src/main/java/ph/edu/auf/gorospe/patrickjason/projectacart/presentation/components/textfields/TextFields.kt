@@ -1,4 +1,4 @@
-package ph.edu.auf.gorospe.patrickjason.projectacart.presentation.components
+package ph.edu.auf.gorospe.patrickjason.projectacart.presentation.components.textfields
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons

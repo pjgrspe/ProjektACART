@@ -1,6 +1,5 @@
-package ph.edu.auf.gorospe.patrickjason.projectacart.presentation.components
+package ph.edu.auf.gorospe.patrickjason.projectacart.presentation.components.buttons
 
-import android.media.Image
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
