@@ -16,7 +16,9 @@ import androidx.compose.ui.graphics.luminance
 import androidx.compose.ui.tooling.preview.Preview
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 import ph.edu.auf.gorospe.patrickjason.projectacart.presentation.BottomNavigationBar
+import ph.edu.auf.gorospe.patrickjason.projectacart.presentation.auth.registrationscreen.RegistrationScreen
 import ph.edu.auf.gorospe.patrickjason.projectacart.presentation.auth.welcomescreen.WelcomeScreen
+import ph.edu.auf.gorospe.patrickjason.projectacart.presentation.components.topappbar.MyTopAppBar
 import ph.edu.auf.gorospe.patrickjason.projectacart.ui.theme.AppTheme
 
 class MainActivity : ComponentActivity() {
@@ -27,9 +29,11 @@ class MainActivity : ComponentActivity() {
             AppTheme {
                 SetBarColor(color = AppTheme.colorScheme.background)
                 Scaffold(
-//                    bottomBar = { BottomNavigationBar() },
+//                    topBar = { MyTopAppBar(title = "Project A Cart", showActionButton = false) }, TEST ONLY
+//                    bottomBar = { BottomNavigationBar() }, TEST ONLY
                     modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    WelcomeScreen()
+//                    WelcomeScreen() //TEST ONLY
+//                    RegistrationScreen() //TEST ONLY
                     Greeting(
                         name = "Android",
                         modifier = Modifier.padding(innerPadding)
@@ -39,6 +43,7 @@ class MainActivity : ComponentActivity() {
         }
     }
     @Composable
+    //SET ANDROID STATUS BAR COLOR
     private fun SetBarColor(color: Color){
         val systemUIController = rememberSystemUiController()
         SideEffect {
